@@ -26,7 +26,7 @@ def find_valid_calls(planeteer_calls)
   # Return the first valid call found, or return nil if no valid calls are found
   counter  = 0 
   while counter < valid_calls.length do 
-    if valid_calls[counter].any? planeteer_calls[counter]
+    if valid_calls[counter].any?(planeteer_calls[counter])
       return valid_calls[counter]
     else
       counter +=1 
