@@ -24,14 +24,13 @@ def find_valid_calls(planeteer_calls)
   valid_calls = ["Earth!", "Wind!", "Fire!", "Water!", "Heart!"]
   # Use an Enumerable to check if any elements in the passed in array match the valid calls listed above 
   # Return the first valid call found, or return nil if no valid calls are found
-  counter  = 0 
-  while counter < valid_calls.length do 
-    if valid_calls[counter] == planeteer_calls[counter]
-      return valid_calls[counter]
-    else
-      counter +=1 
+  planeteer_calls.each do |e|
+    valid_calls.each do |v|
+      if v == e
+        return v
+      end
     end
   end
-      
-  return nil 
+  return nil
+
 end
